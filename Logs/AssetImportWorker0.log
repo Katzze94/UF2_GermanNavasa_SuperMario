@@ -955,3 +955,48 @@ Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a
  -> (artifact id: 'e4f2a358bdc9999663b950d6dae81668') in 0.024359 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 906.178258 seconds.
+  path: Assets/Mundo 1.unity
+  artifactKey: Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '14ce67ea8e15009c086f95b8b5134c93') in 0.023444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 459.566931 seconds.
+  path: Assets/Mundo 1.unity
+  artifactKey: Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b11f4db93f8eb941e268eeb4b89e0f6') in 0.019914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1047.294502 seconds.
+  path: Assets/Mundo 1.unity
+  artifactKey: Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a9ec7638eeef00a5cbbc5a9a2557a192') in 0.016603 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 106.946751 seconds.
+  path: Assets/Mundo 1.unity
+  artifactKey: Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '15ff8941769d7023be76ddc0aa09388b') in 0.014422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 170.168873 seconds.
+  path: Assets/Mundo 1.unity
+  artifactKey: Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mundo 1.unity using Guid(7015ad5acb7a91c408d769bd799e145a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c90f3430c0fff0487fa1b9fb5e7c064d') in 0.031017 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
