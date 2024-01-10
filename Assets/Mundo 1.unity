@@ -5855,6 +5855,7 @@ GameObject:
   - component: {fileID: 225788047}
   - component: {fileID: 225788046}
   - component: {fileID: 225788049}
+  - component: {fileID: 225788050}
   m_Layer: 0
   m_Name: Mario_0
   m_TagString: Untagged
@@ -5929,7 +5930,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 205225503, guid: 77d8d315f0bfd9947b8083aabb05a17f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6001,6 +6002,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8125, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &225788050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225788045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285347135a09cee48bb845d77361700a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPosition: {x: 50, y: 5, z: 0}
+  movementSpeed: 5
+  jump: 0
 --- !u!1 &231460979
 GameObject:
   m_ObjectHideFlags: 0
@@ -35227,7 +35243,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -35277,7 +35293,7 @@ Transform:
   m_GameObject: {fileID: 1346767438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -101.17, y: -0.91, z: 0.09708209}
+  m_LocalPosition: {x: -101.17, y: -0.91, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
