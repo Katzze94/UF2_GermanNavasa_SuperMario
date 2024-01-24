@@ -5,11 +5,21 @@ using UnityEngine;
 public class GroundSensor : MonoBehaviour
 {
    public bool isGrounded;
+   public Animator anim;
 
+  
+  void Awake()
+  {
+   anim = GetComponentInParent<Animator>();
+  }
+  
+  
+  
    void OnTriggerEnter2D(Collider2D collider)
    {
 
     isGrounded = true;
+    anim.SetBool("isJumping", false);
 
    }
 

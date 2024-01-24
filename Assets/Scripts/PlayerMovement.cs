@@ -17,9 +17,15 @@ public class PlayerMovement : MonoBehaviour
 
     public GroundSensor sensor;
 
+    public SpriteRenderer render;
+
+    public Animator anim;
+
 void Awake()
 {
     rBody = GetComponent<Rigidbody2D>();
+    render = GetComponent<SpriteRenderer>();
+    anim = GetComponent<Animator>();
 }
 
     // Start is called before the first frame update
@@ -58,7 +64,22 @@ void Awake()
         {   
             
             rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
+            anim.SetBool("isJumping", true);
+         }
+        
+        if(inputHorizontal < 0)
+        {
+            render.flipX = true;
+            anim.SetBool("isRunning", true);
+        }
+        else if(inputHorizontal > 0)
+        {
+            render.flipX = false;
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
     }
 
