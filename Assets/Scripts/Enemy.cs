@@ -25,7 +25,9 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(enemyDirection == 1)
+        if(collision.gameObject.layer == 3)
+        {
+            if(enemyDirection == 1)
         {
             enemyDirection = -1;
 
@@ -33,6 +35,13 @@ public class Enemy : MonoBehaviour
         else if(enemyDirection == -1)
         {
             enemyDirection = 1;
+        }
+
+        }
+        
+        if(collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
