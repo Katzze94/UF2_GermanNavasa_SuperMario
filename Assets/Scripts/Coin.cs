@@ -8,6 +8,8 @@ public class Coin : MonoBehaviour
     private AudioSource source;
 
     public AudioClip coinSound;
+
+    public Rigidbody2D rBody;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +27,19 @@ public class Coin : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         source = GetComponent<AudioSource>();
+
+        rBody = GetComponent<Rigidbody2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D Collider)
     {
-    if(collision.gameObject.tag == "Player") 
+    if(Collider.gameObject.tag == "Player") 
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 0.4f);
 
-        source.PlayOneShot(coinSound);
+        source.clip = coinSound;
+
+        source.Play();
 
     }
 
