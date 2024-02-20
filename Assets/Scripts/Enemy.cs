@@ -6,13 +6,25 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D rBody;
 
+    private AudioSource source;
+
+    private BoxCollider2D boxCollider;
+
+    
+    
+    public AudioClip deathSound;
+    
     public float enemySpeed = 5;
 
     public float enemyDirection = 1;
+
+
     // Start is called before the first frame update
     void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
+        source = GetComponent<AudioSource>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         
     }
@@ -35,6 +47,7 @@ public class Enemy : MonoBehaviour
         else if(enemyDirection == -1)
         {
             enemyDirection = 1;
+            
         }
 
         }
@@ -43,5 +56,14 @@ public class Enemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    public void GoombaDeath()
+    {
+        source.PlayOneShot(deathSound);
+        boxCollider.enabled = false;
+        rBody.gravityScale = 0;
+        enemyDirection = 0;
+        Destroy(gameObject, 0.5f);
     }
 }
