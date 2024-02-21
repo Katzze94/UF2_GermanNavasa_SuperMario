@@ -13,7 +13,7 @@ public class BGMManager : MonoBehaviour
     {
         source.clip = lvl1Music;
         source.Play();
-        source.Stop();
+        
     }
 
     // Update is called once per frame

@@ -1695,7 +1695,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 27b86548041ebd1418f66b5ab87bb5a6, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7684,7 +7684,7 @@ Transform:
   m_GameObject: {fileID: 225788045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -109.7, y: -1.254, z: 0}
+  m_LocalPosition: {x: -110.4, y: -3.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22405,9 +22405,10 @@ GameObject:
   - component: {fileID: 663544465}
   - component: {fileID: 663544464}
   - component: {fileID: 663544463}
+  - component: {fileID: 663544466}
   m_Layer: 0
   m_Name: Banderas_0
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22508,10 +22509,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2276535, y: 0.5122199}
+  m_Offset: {x: 0.2276535, y: 0.52623796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22522,7 +22523,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41864014, y: 9.47556}
+  m_Size: {x: 0.41864014, y: 9.447524}
   m_EdgeRadius: 0
 --- !u!82 &663544464
 AudioSource:
@@ -22632,9 +22633,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec8128e2a263e14497575ca29602066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  flagsound: {fileID: 8300000, guid: f31fdb61146ad3e4c901264520419238, type: 3}
-  lvl1Music: {fileID: 1805021272}
+  boxCollider: {fileID: 0}
+  completed: {fileID: 8300000, guid: b0114f4eb1714714dacd8e85aac5fd7c, type: 3}
+  bgmManager: {fileID: 1805021271}
+--- !u!61 &663544466
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663544460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.22428894, y: -4.72586}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 10.5}
+    newSize: {x: 1.5, y: 10.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0514221, y: 1.0482798}
+  m_EdgeRadius: 0
 --- !u!1 &666096168
 GameObject:
   m_ObjectHideFlags: 0
@@ -47556,7 +47602,6 @@ GameObject:
   - component: {fileID: 1414997546}
   - component: {fileID: 1414997545}
   - component: {fileID: 1414997547}
-  - component: {fileID: 1414997548}
   m_Layer: 0
   m_Name: Coins1_1
   m_TagString: Coin
@@ -47666,7 +47711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 0}
   coinSound: {fileID: 8300000, guid: a4364333710db894da6cfd0182d1fbc4, type: 3}
-  rBody: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!61 &1414997546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47808,33 +47853,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!50 &1414997548
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414997541}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1415673871
 GameObject:
   m_ObjectHideFlags: 0
@@ -59024,7 +59042,7 @@ GameObject:
   - component: {fileID: 1805021272}
   - component: {fileID: 1805021271}
   m_Layer: 0
-  m_Name: Super Mario Bros (NES) Music - Overworld Theme
+  m_Name: BGMManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59069,10 +59087,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

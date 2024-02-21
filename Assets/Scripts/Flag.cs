@@ -4,28 +4,72 @@ using UnityEngine;
 
 public class Flag : MonoBehaviour
 {
-    public AudioSource source;
-    public AudioClip flagsound;
+    public BoxCollider2D boxCollider;
 
-    public AudioSource lvl1Music;
+    private AudioSource source;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        source = GetComponent<AudioSource>();
+    public AudioClip completed;
+
+    public BGMManager bgmManager;
+
+
+
+
+
+    void Awake()
+  {
+        BoxCollider2D[] colliders = GetComponents<BoxCollider2D>();
+        for (int i = 0; i < Mathf.Min(colliders.Length, 2); i++){
+            if (i==0) boxCollider = colliders[i];
+        }
+
+        source=GetComponent<AudioSource>();
 
     }
 
-    // Update is called once per frame
-    void OnTriggerEnter2D(Collider2D Collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if(Collider.gameObject.tag == "Player")
+        if(collider.gameObject.tag == "Player")
         {
-            lvl1Music.Pause();
-            source.clip = flagsound;
-
-            source.Play();
+            source.PlayOneShot(completed);
+            AudioSource bgmSource = bgmManager.GetComponent<AudioSource>();
+            bgmSource.Stop();
             
-}
+
+            
+
+        }
+
+
+    
+
+
     }
-}
+
+    
+} 
+//     public AudioSource source;
+//     public AudioClip flagsound;
+
+//     public AudioSource lvl1Music;
+
+//     // Start is called before the first frame update
+//     void Start()
+//     {
+//         source = GetComponent<AudioSource>();
+
+//     }
+
+//     // Update is called once per frame
+//     void OnTriggerEnter2D(Collider2D Collider)
+//     {
+//         if(Collider.gameObject.tag == "Player")
+//         {
+//             lvl1Music.Pause();
+//             source.clip = flagsound;
+
+//             source.Play();
+            
+// }
+//     }
+
