@@ -2297,7 +2297,7 @@ GameObject:
   - component: {fileID: 60727798}
   m_Layer: 0
   m_Name: Goombas_0
-  m_TagString: Untagged
+  m_TagString: Goombas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2314,6 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4adf31b25d21e54f9c60f080d7be84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxCollider: {fileID: 0}
   deathSound: {fileID: 8300000, guid: e3c78080d122a4a408c54f41c04e4445, type: 3}
   enemySpeed: 5
   enemyDirection: 1
@@ -47624,7 +47625,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 387974044, guid: 8321568b673cd7d4bb13028d60560130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

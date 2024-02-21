@@ -69,7 +69,7 @@ void Awake()
         if(Input.GetButtonDown("Jump") && sensor.isGrounded == true)
         {   
             
-            rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rBody.AddForce(new Vector2(0,1) * jumpForce, ForceMode2D.Impulse);
             anim.SetBool("isJumping", true);
             source.PlayOneShot (jumpSound);
          }
