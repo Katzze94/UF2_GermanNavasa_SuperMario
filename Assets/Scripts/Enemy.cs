@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     private AudioSource source;
 
-    private BoxCollider2D boxCollider;
+    public BoxCollider2D boxCollider;
 
     
     
