@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Goombas
+  - Void
   layers:
   - Default
   - TransparentFX

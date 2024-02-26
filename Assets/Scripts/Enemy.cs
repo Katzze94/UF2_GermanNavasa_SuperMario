@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     public float enemyDirection = 1;
 
+    public int contGoomba;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -54,16 +56,22 @@ public class Enemy : MonoBehaviour
         
         if(collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            
+          PlayerMovement player=GameObject.FindObjectOfType<PlayerMovement>();
+          player.MarioDeath();
         }
     }
 
     public void GoombaDeath()
     {
+        ContManager contManager = GameObject.FindObjectOfType<ContManager>();
+        contManager.LoadGoombaCont();
         source.PlayOneShot(deathSound);
         boxCollider.enabled = false;
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject, 0.5f);
     }
+
+
 }

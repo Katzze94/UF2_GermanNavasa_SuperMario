@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -96,5 +98,18 @@ void Awake()
     
     }
 
-   
+   void OnCollisionEnter2D(Collision2D collision)
+   {
+    if(collision.gameObject.tag=="Void")
+    {
+        MarioDeath();
+    }
+    
+   }
+
+   public void MarioDeath()
+   {
+    SceneManager.LoadScene("Game Over");
+    Destroy(gameObject);
+   }
 }
