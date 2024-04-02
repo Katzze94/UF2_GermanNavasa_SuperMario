@@ -27,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioClip jumpSound;
 
+    public Transform bulletSpawn;
+
+    public GameObject bulletPrefab;
+
+    private bool canShoot = true;
+
+    public float timer;
+
+    public float rateOfFire = 1;
+
 void Awake()
 {
     rBody = GetComponent<Rigidbody2D>();
@@ -48,6 +58,8 @@ void Awake()
     // Update is called once per frame
     void Update()
     {
+
+        Shoot();
         inputHorizontal = Input.GetAxis("Horizontal");
         //transform.position = transform.position + new Vector3(1, 0, 0) * movementSpeed * Time.deltaTime;
         // transform.position += new Vector3(inputHorizontal, 0, 0) * movementSpeed * Time.deltaTime;
@@ -106,6 +118,30 @@ void Awake()
     }
     
    }
+
+    void Shoot()
+    {
+        if(!canShoot)
+        {
+            timer += Time.deltaTime;
+            if(timer>= rateOfFire)
+            {
+                canShoot = true;
+                timer = 0;
+            }
+
+        }
+        if(Input.GetKeyDown(KeyCode.F) && canShoot)
+        {
+            Instantiate(bulletPrefab, bulletSpawn.position,bulletSpawn.rotation);
+
+            canShoot = false;
+        }
+    }
+
+
+
+
 
    public void MarioDeath()
    {

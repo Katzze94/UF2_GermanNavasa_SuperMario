@@ -8583,6 +8583,10 @@ MonoBehaviour:
   render: {fileID: 0}
   anim: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: fa97dc49f97ffa6429414b1c253671a4, type: 3}
+  bulletSpawn: {fileID: 2004935964}
+  bulletPrefab: {fileID: 2004935962}
+  timer: 0
+  rateOfFire: 1
 --- !u!95 &225788051
 Animator:
   serializedVersion: 5
@@ -53385,6 +53389,7 @@ GameObject:
   - component: {fileID: 1557655113}
   - component: {fileID: 1557655112}
   - component: {fileID: 1557655111}
+  - component: {fileID: 1557655114}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -53475,6 +53480,33 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!50 &1557655114
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557655109}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1559616295
 GameObject:
   m_ObjectHideFlags: 0
@@ -67028,6 +67060,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2004935964}
   - component: {fileID: 2004935963}
+  - component: {fileID: 2004935965}
+  - component: {fileID: 2004935966}
   m_Layer: 0
   m_Name: Bola de fuego
   m_TagString: Untagged
@@ -67077,7 +67111,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.5084055, b: 0.1054201, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -67096,12 +67130,52 @@ Transform:
   m_GameObject: {fileID: 2004935962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -107.11, y: -4.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -107.78, y: -9.59, z: 0}
+  m_LocalScale: {x: 0.24025153, y: 0.24025153, z: 0.24025153}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004935965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004935962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dc81a9191ce68438f04e95d77a2eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 6
+--- !u!50 &2004935966
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004935962}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2012555916
 GameObject:
   m_ObjectHideFlags: 0
