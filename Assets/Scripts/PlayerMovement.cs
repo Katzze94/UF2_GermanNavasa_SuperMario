@@ -37,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float rateOfFire = 1;
 
+    public Transform hitBox;
+
+    public float hitBoxRadius = 2;
+
 void Awake()
 {
     rBody = GetComponent<Rigidbody2D>();
@@ -102,6 +106,12 @@ void Awake()
         {
             anim.SetBool("isRunning", false);
         }
+
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            //Attack();
+            anim.SetTrigger("isAttacking");
+        }
     }
 
     void FixedUpdate()
@@ -147,5 +157,28 @@ void Awake()
    {
     SceneManager.LoadScene("Game Over");
     Destroy(gameObject);
+   }
+
+   public void Attack()
+   {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(hitBox.position, hitBoxRadius);
+
+        foreach (Collider2D enemy in enemies)
+        {
+            if(enemy.gameObject.tag == "Goombas")
+            {
+                //Destroy(enemy.GameObject);
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+
+                enemyScript.GoombaDeath();
+            }
+        }
+   }
+
+
+   void OnDrawGizmos()
+   {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(hitBox.position, hitBoxRadius);
    }
 }

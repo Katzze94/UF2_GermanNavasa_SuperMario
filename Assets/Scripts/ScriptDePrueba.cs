@@ -36,24 +36,53 @@ public class ScriptDePrueba : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(arrayNumeros[1]);
-        Debug.Log(arrayNumeros[0]);
+       // Debug.Log(arrayNumeros[1]);
+       // Debug.Log(arrayNumeros[0]);
 
-        Debug.Log(array2Dimensiones2[0, 1]);
+      //  Debug.Log(array2Dimensiones2[0, 1]);
 
-        arrayNumeros2[0] = 4;
-        arrayNumeros2[5] = 3;
+       // arrayNumeros2[0] = 4;
+       // arrayNumeros2[5] = 3;
 
-        array2Dimensiones2[2, 1] = 777777;
+       // array2Dimensiones2[2, 1] = 777777;
 
-        intList2.Add(10);
+      //  intList2.Add(10);
 
-        intList2.Insert(5, 888);
-        intList2.RemoveAt(2);
-        intList2.Remove(78);
+       // intList2.Insert(5, 888);
+       // intList2.RemoveAt(2);
+       // intList2.Remove(78);
 
-        intList2.Clear();
-    }
+        //intList2.Clear();
+
+       
+        /*
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log(i);
+        }
+        */
+
+        /*
+        int i = 0;
+        while (i < 5)
+        {
+            Debug.Log(i);
+            i++;
+        }
+        */
+        /*
+        int i = 0;
+        do
+        {
+            Debug.Log(i);
+            i++;
+        } while (i < 5);
+        */
+
+        foreach (int numero in arrayNumeros3)
+        {
+            Debug.Log(numero);
+        }
 
         //vidasPersonaje = 10;
        // numeroDecimal = 7.54f;
@@ -78,5 +107,7 @@ public class ScriptDePrueba : MonoBehaviour
     {
   
    }
+
+    }
 }
 

@@ -38,11 +38,27 @@ public class EnemySpawn : MonoBehaviour
 
         if(timer >= waitTime)
         {
-            /*Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], spawnPoint[0].position, spawnPoint[0].rotation);
+            //esto es para el array
+            /*
+            Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], spawnPoint[0].position, spawnPoint[0].rotation);
             Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], spawnPoint[1].position, spawnPoint[1].rotation);
-            Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], spawnPoint[2].position, spawnPoint[2].rotation);*/
+            Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], spawnPoint[2].position, spawnPoint[2].rotation);
+            */
+            //bucle para el spawn de los enemigos, nohay que repetir
+           
+            /*
+            foreach (Transform point in spawnPoint)
+            {
+                Instantiate(enemyPrefab[random.Range(0, enemyPrefab.Length)], point.position, point.rotation);
+            }
+            */
 
-            Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnPoint[Random.Range(0, spawnPoint.Length)].position, spawnPoint[Random.Range(0, spawnPoint.Length)].rotation);
+            for (int i= 0; i < spawnPoint.Length; i++)
+            {
+                Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnPoint[i].position, spawnPoint[i].rotation);
+            }
+
+            //Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawnPoint[Random.Range(0, spawnPoint.Length)].position, spawnPoint[Random.Range(0, spawnPoint.Length)].rotation);
 
             timer = 0;
         }
