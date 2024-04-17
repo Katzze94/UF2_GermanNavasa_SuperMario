@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private GameManager gameManager;  //Parte de gamemanager sale en examen
+    
     private Rigidbody2D rBody;
 
     private AudioSource source;
@@ -27,6 +29,8 @@ public class Enemy : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
         boxCollider = GetComponent<BoxCollider2D>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
 
         
     }
@@ -73,5 +77,15 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
+
+    void OnBecameVisible() //Parte de gamemanager sale en examen
+    {
+        gameManager.enemiesInScreen.Add(this.gameObject);
+    }
+
+    void OnBecameInvisible()
+    {
+        gameManager.enemiesInScreen.Remove(this.gameObject); //Parte de gamemanager sale en examen
+    }
 
 }
