@@ -62,8 +62,15 @@ public class Enemy : MonoBehaviour
         {
             
           PlayerMovement player=GameObject.FindObjectOfType<PlayerMovement>();
-          player.MarioDeath();
+          //player.MarioDeath();
+          
+          if(player.isDeath == false)
+          {
+            player.StartCoroutine("Die");
+          }
+          
         }
+
     }
 
     public void GoombaDeath()
