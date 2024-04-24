@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float hitBoxRadius = 2;
 
+    public AudioClip deathSound;
+
+    public bool isDeath = false;
+
 void Awake()
 {
     rBody = GetComponent<Rigidbody2D>();
@@ -124,7 +128,8 @@ void Awake()
    {
     if(collision.gameObject.tag=="Void")
     {
-        MarioDeath();
+        //MarioDeath();
+        StartCoroutine("Die");
     }
     
    }
@@ -155,8 +160,28 @@ void Awake()
 
    public void MarioDeath()
    {
+    source.PlayOneShot(deathSound);
     SceneManager.LoadScene("Game Over");
     Destroy(gameObject);
+    //StopCoroutine("Die")
+    
+   }
+
+   public IEnumerator Die()  //Corrutina
+   {
+    
+    isDeath = true;
+    
+    source.PlayOneShot(deathSound);
+    //Destroy(gameObject);
+
+    yield return new WaitForSeconds(3);
+   // yield return new WaitForSecondsRealtime(2); 
+   // yield return new null;
+   // yield return new WaitForEndOfFrame();
+
+    SceneManager.LoadScene("Game Over");
+    
    }
 
    public void Attack()
