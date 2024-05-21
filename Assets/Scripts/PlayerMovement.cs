@@ -126,7 +126,7 @@ void Awake()
 
    void OnCollisionEnter2D(Collision2D collision)
    {
-    if(collision.gameObject.tag=="Void")
+    if(collision.gameObject.tag =="Void")
     {
         //MarioDeath();
         StartCoroutine("Die");
